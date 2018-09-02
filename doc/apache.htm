@@ -1,0 +1,269 @@
+<html>
+
+<head>
+<title>Apache</title>
+</head>
+
+<body>
+<h1>Apache</h1>
+
+<p><a href='https://help.ubuntu.com/lts/serverguide/httpd.html'>Ubuntu doc</a></p>
+
+<ul>
+<li><a href='#C'>Configuration</a>
+<ul>
+<li><a href='#CF'>Files</a></li>
+<li><a href='#CL'>Language</a></li>
+</ul>
+</li>
+<li><a href='#I'>Installation</a></li>
+<li><a href='#L'>Logging</a></li>
+</ul>
+
+<hr/>
+<h2 id=I>Installation</h2>
+<pre>
+sudo apt install apache2
+</pre>
+
+<hr/>
+<h2 id=C>Configuration</h2>
+
+<h3 id=CF>Configuration Files</h3>
+
+<p>The Apache2 configuration files are under /etc/apache2.</p>
+
+<p>In addition to the files listed below, the following directories are also used:</p>
+<ul>
+<li>conf-enabled: holds symlinks to the files in /etc/apache2/conf-available. When a configuration file is symlinked, it will be enabled the next time apache2 is restarted.</li>
+<li>mods-enabled: holds symlinks to the files in /etc/apache2/mods-available. When a module configuration file is symlinked it will be enabled the next time apache2 is restarted.</li>
+<li>sites-enabled: like mods-enabled, sites-enabled contains symlinks to the /etc/apache2/sites-available directory. Similarly when a configuration file in sites-available is symlinked, the site configured by it will be active once Apache2 is restarted.</li>
+</ul>
+<p>Finally, in addition, other configuration files may be added using the Include directive, and wildcards can be used to include many configuration files. Any directive may be placed in any of these configuration files. Changes to the main configuration files are only recognized by Apache2 when it is started or restarted.</p>
+
+
+<h3>.conf Files</h3>
+
+<table cellspacing=0 border=1>
+<tr><th>Files</th><th>Description</th></tr>
+
+<tr><td>apache2.conf</td><td>
+The main Apache2 configuration file. Contains settings that are global to Apache2.
+</td></tr>
+
+<tr><td>magic</td><td>
+Instructions for determining MIME type based on the first few bytes of a file.
+</td></tr>
+
+<tr><td>envvars</td><td>
+File where Apache2 environment variables are set. HOWTOs
+</td></tr>
+
+<tr><td>ports.conf</td><td>
+Houses the directives that determine which TCP ports Apache2 is listening on.
+</td></tr>
+
+<tr><td>conf-available/charset.conf</td><td>
+Contains the AddDefaultCharset directive. It will override any encoding given in the files
+in meta http-equiv or xml encoding tags.
+</td></tr>
+
+<tr><td>conf-available/javascript-common.conf</td><td>
+Contains directives to control Javascript processing.
+</td></tr>
+
+<tr><td>conf-available/localized-error-pages.conf</td><td>
+Controls http request error handling. The responses can be localized.
+</td></tr>
+
+<tr><td>conf-available/other-vhosts-access-log.conf</td><td>
+Define an access log for VirtualHosts that don't define their own logfile.
+</td></tr>
+
+<tr><td>conf-available/serve-cgi-bin.conf</td><td>
+Settings for CGI processing.
+</td></tr>
+
+<tr><td>conf-available/security.conf</td><td>
+Controls the webserver's security settings. Limits access to system resources and so on.
+</td></tr>
+
+<tr><td>sites-available/default-ssl.conf</td><td>
+The sites-available directory has configuration files for Apache2 Virtual Hosts. Virtual Hosts allow Apache2 to be configured for multiple sites that have separate configurations. This is the configuration file for https (port 443) connections.
+</td></tr>
+
+<tr><td>sites-available/000-default.conf</td><td>
+The sites-available directory has configuration files for Apache2 Virtual Hosts. Virtual Hosts allow Apache2 to be configured for multiple sites that have separate configurations. This is the configuration file for http (port 80) connections.
+</td></tr>
+
+</table>
+
+<h2>.load Files</h3>
+
+<p>The /etc/apache2/mods-available directory contains load files. Each .load file specifies
+<ul>
+<li>The module name</li>
+<li>The shared object path</li>
+<li>(optional) Modules on which the module depends</li>
+</ul>
+<p>Some modules also have associated .conf files, used to configure the module when it is loaded.</p>
+
+<table cellspacing=0 border=1>
+<tr><th>Modules</th><th>Description</th><th>Config File</th></tr>
+
+<tr><td>access_compat</td><td> </td><td></td></tr>
+<tr><td>actions</td><td> </td><td>.conf</td></tr>
+<tr><td>alias</td><td> </td><td>.conf</td></tr>
+<tr><td>allowmethods</td><td> </td><td></td></tr>
+<tr><td>asis</td><td> </td><td></td></tr>
+<tr><td>auth_basic</td><td> </td><td></td></tr>
+<tr><td>auth_digest</td><td> </td><td></td></tr>
+<tr><td>auth_form</td><td> </td><td></td></tr>
+<tr><td>authn_core</td><td> </td><td></td></tr>
+<tr><td>authn_socache</td><td> </td><td></td></tr>
+<tr><td>authn_dbm</td><td> </td><td></td></tr>
+<tr><td>authn_anon</td><td> </td><td></td></tr>
+<tr><td>authn_dbd</td><td> </td><td></td></tr>
+<tr><td>authn_file</td><td> </td><td></td></tr>
+<tr><td>authnz_fcgi</td><td> </td><td></td></tr>
+<tr><td>authnz_ldap</td><td> </td><td></td></tr>
+<tr><td>authz_core</td><td> </td><td></td></tr>
+<tr><td>authz_dbd</td><td> </td><td></td></tr>
+<tr><td>authz_dbm</td><td> </td><td></td></tr>
+<tr><td>authz_groupfile</td><td> </td><td></td></tr>
+<tr><td>authz_host</td><td> </td><td></td></tr>
+<tr><td>authz_owner</td><td> </td><td></td></tr>
+<tr><td>authz_user</td><td> </td><td></td></tr>
+<tr><td>autoindex</td><td> </td><td>.conf</td></tr>
+
+<tr><td>buffer</td><td> </td><td></td></tr>
+
+<tr><td>cache</td><td> </td><td></td></tr>
+<tr><td>cache_disk</td><td> </td><td>.conf</td></tr>
+<tr><td>cache_socache</td><td> </td><td></td></tr>
+<tr><td>cern_meta</td><td> </td><td></td></tr>
+<tr><td>cgi</td><td> </td><td></td></tr>
+<tr><td>cgid</td><td> </td><td>.conf</td></tr>
+<tr><td>charset_lite</td><td> </td><td></td></tr>
+
+<tr><td>data</td><td> </td><td></td></tr>
+<tr><td>dav</td><td> </td><td></td></tr>
+<tr><td>dav_fs</td><td> </td><td>.conf</td></tr>
+<tr><td>dav_lock</td><td> </td><td></td></tr>
+<tr><td>dbd</td><td> </td><td></td></tr>
+<tr><td>deflate</td><td> </td><td>.conf</td></tr>
+<tr><td>dialup</td><td> </td><td></td></tr>
+<tr><td>dir</td><td> </td><td>.conf</td></tr>
+<tr><td>dnssd</td><td> </td><td>.conf</td></tr>
+
+<tr><td>dump_io</td><td> </td><td></td></tr>
+
+<tr><td>echo</td><td> </td><td></td></tr>
+<tr><td>env</td><td> </td><td></td></tr>
+<tr><td>expires</td><td> </td><td></td></tr>
+<tr><td>ext_filter</td><td> </td><td></td></tr>
+
+<tr><td>file_cache</td><td> </td><td></td></tr>
+<tr><td>filter</td><td> </td><td></td></tr>
+
+<tr><td>headers</td><td> </td><td></td></tr>
+<tr><td>heartbeat</td><td> </td><td></td></tr>
+<tr><td>heartmonitor</td><td> </td><td></td></tr>
+<tr><td>http2</td><td> </td><td></td></tr>
+
+<tr><td>include</td><td> </td><td></td></tr>
+<tr><td>ident</td><td> </td><td></td></tr>
+<tr><td>imagemap</td><td> </td><td></td></tr>
+<tr><td>info</td><td> </td><td>.conf</td></tr>
+
+<tr><td>lbmethod_byrequests</td><td> </td><td></td></tr>
+<tr><td>lbmethod_bybusyness</td><td> </td><td></td></tr>
+<tr><td>lbmethod_bytraffic</td><td> </td><td></td></tr>
+<tr><td>lbmethod_heartbeat</td><td> </td><td></td></tr>
+<tr><td>ldap</td><td> </td><td>.conf</td></tr>
+
+<tr><td>log_debug</td><td> </td><td></td></tr>
+<tr><td>log_forensic</td><td> </td><td></td></tr>
+<tr><td>lua</td><td> </td><td></td></tr>
+
+<tr><td>macro</td><td> </td><td></td></tr>
+<tr><td>mime</td><td> </td><td>The server reads a file containing mime document types; the filename is set by the TypesConfig directive, typically via /etc/apache2/mods-available/mime.conf, which might also include additions and overrides, and is /etc/mime.types by default.</td></tr>
+
+<tr><td>mime_magic</td><td> </td><td>.conf</td></tr>
+<tr><td>mpm_event</td><td> </td><td>.conf</td></tr>
+<tr><td>mpm_prefork</td><td> </td><td>.conf</td></tr>
+<tr><td>mpm_worker</td><td> </td><td>.conf</td></tr>
+
+<tr><td>negotiation</td><td> </td><td>.conf</td></tr>
+
+<tr><td>proxy</td><td> </td><td>.conf</td></tr>
+
+<tr><td>proxy_ajp</td><td> </td><td></td></tr>
+<tr><td>proxy_balancer</td><td> </td><td>.conf</td></tr>
+<tr><td>proxy_connect</td><td> </td><td></td></tr>
+<tr><td>proxy_express</td><td> </td><td></td></tr>
+<tr><td>proxy_fcgi</td><td> </td><td></td></tr>
+<tr><td>proxy_fdpass</td><td> </td><td></td></tr>
+<tr><td>proxy_ftp</td><td> </td><td>.conf</td></tr>
+<tr><td>proxy_hcheck</td><td> </td><td></td></tr>
+<tr><td>proxy_html</td><td> </td><td>.conf</td></tr>
+<tr><td>proxy_http</td><td> </td><td></td></tr>
+<tr><td>proxy_http2</td><td> </td><td></td></tr>
+<tr><td>proxy_scgi</td><td> </td><td></td></tr>
+<tr><td>proxy_wstunnel</td><td> </td><td></td></tr>
+
+<tr><td>ratelimit</td><td> </td><td></td></tr>
+<tr><td>reflector</td><td> </td><td></td></tr>
+<tr><td>remoteip</td><td> </td><td></td></tr>
+<tr><td>reqtimeout</td><td> </td><td>.conf</td></tr>
+<tr><td>request</td><td> </td><td></td></tr>
+<tr><td>rewrite</td><td> </td><td></td></tr>
+
+<tr><td>sed</td><td> </td><td></td></tr>
+<tr><td>session</td><td> </td><td></td></tr>
+<tr><td>session_cookie</td><td> </td><td></td></tr>
+<tr><td>session_crypto</td><td> </td><td></td></tr>
+<tr><td>session_dbd</td><td> </td><td></td></tr>
+<tr><td>setenvif</td><td> </td><td>.conf</td></tr>
+<tr><td>slotmem_plain</td><td> </td><td></td></tr>
+<tr><td>slotmem_shm</td><td> </td><td></td></tr>
+<tr><td>socache_dbm</td><td> </td><td></td></tr>
+<tr><td>socache_memcache</td><td> </td><td></td></tr>
+<tr><td>socache_shmcb</td><td> </td><td></td></tr>
+<tr><td>speling</td><td> </td><td></td></tr>
+<tr><td>ssl</td><td> </td><td>.conf</td></tr>
+<tr><td>status</td><td> </td><td>.conf</td></tr>
+
+<tr><td>substitute</td><td> </td><td></td></tr>
+<tr><td>suexec</td><td> </td><td></td></tr>
+
+<tr><td>unique_id</td><td> </td><td></td></tr>
+<tr><td>userdir</td><td> </td><td>.conf</td></tr>
+
+<tr><td>usertrack</td><td> </td><td></td></tr>
+
+<tr><td>vhost_alias</td><td> </td><td></td></tr>
+
+<tr><td>xml2enc</td><td> </td><td></td></tr>
+</table>
+
+<h3 id=CL>Configuration File Language</h3>
+
+<hr/>
+<h2 id=L>Logging</h2>
+
+<p>The logging directory is specified in /etc/apache2/envvars.</p>
+<p>The log file names and content is specified in the sites-available configuration files and
+conf-available/other-vhosts-access-log.conf.</p>
+
+<p>The default settings are:</p>
+
+<table cellspacing=0 border=1>
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>access.log</td><td>Logs client accesses to the server</td></tr>
+<tr><td>error.log</td><td>Misc messages</td></tr>
+<tr><td>other_vhosts_access.log</td><td>Access log for VirtualHosts that don't define their own logfile.</td></tr>
+</table>
+</body>
+
+</html>
