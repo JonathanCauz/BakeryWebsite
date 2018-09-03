@@ -7,9 +7,10 @@
 <body>
 <h1>Apache</h1>
 
-<p><a href='https://help.ubuntu.com/lts/serverguide/httpd.html'>Ubuntu doc</a></p>
+<h3><a href='https://wiki.apache.org/httpd/FAQ'>Frequently Asked Questions</a></h3>
 
 <ul>
+<li><a href='#B'>Binaries</a></li>
 <li><a href='#C'>Configuration</a>
 <ul>
 <li><a href='#CF'>Files</a></li>
@@ -18,6 +19,7 @@
 </li>
 <li><a href='#I'>Installation</a></li>
 <li><a href='#L'>Logging</a></li>
+<li><a href='#R'>References</a></li>
 </ul>
 
 <hr/>
@@ -108,146 +110,137 @@ The sites-available directory has configuration files for Apache2 Virtual Hosts.
 </ul>
 <p>Some modules also have associated .conf files, used to configure the module when it is loaded.</p>
 
-<table cellspacing=0 border=1>
-<tr><th>Modules</th><th>Description</th><th>Config File</th></tr>
+<h3><a href='https://httpd.apache.org/docs/2.4/mod/'>Modules</a></h3>
 
-<tr><td>access_compat</td><td> </td><td></td></tr>
-<tr><td>actions</td><td> </td><td>.conf</td></tr>
-<tr><td>alias</td><td> </td><td>.conf</td></tr>
-<tr><td>allowmethods</td><td> </td><td></td></tr>
-<tr><td>asis</td><td> </td><td></td></tr>
-<tr><td>auth_basic</td><td> </td><td></td></tr>
-<tr><td>auth_digest</td><td> </td><td></td></tr>
-<tr><td>auth_form</td><td> </td><td></td></tr>
-<tr><td>authn_core</td><td> </td><td></td></tr>
-<tr><td>authn_socache</td><td> </td><td></td></tr>
-<tr><td>authn_dbm</td><td> </td><td></td></tr>
-<tr><td>authn_anon</td><td> </td><td></td></tr>
-<tr><td>authn_dbd</td><td> </td><td></td></tr>
-<tr><td>authn_file</td><td> </td><td></td></tr>
-<tr><td>authnz_fcgi</td><td> </td><td></td></tr>
-<tr><td>authnz_ldap</td><td> </td><td></td></tr>
-<tr><td>authz_core</td><td> </td><td></td></tr>
-<tr><td>authz_dbd</td><td> </td><td></td></tr>
-<tr><td>authz_dbm</td><td> </td><td></td></tr>
-<tr><td>authz_groupfile</td><td> </td><td></td></tr>
-<tr><td>authz_host</td><td> </td><td></td></tr>
-<tr><td>authz_owner</td><td> </td><td></td></tr>
-<tr><td>authz_user</td><td> </td><td></td></tr>
-<tr><td>autoindex</td><td> </td><td>.conf</td></tr>
-
-<tr><td>buffer</td><td> </td><td></td></tr>
-
-<tr><td>cache</td><td> </td><td></td></tr>
-<tr><td>cache_disk</td><td> </td><td>.conf</td></tr>
-<tr><td>cache_socache</td><td> </td><td></td></tr>
-<tr><td>cern_meta</td><td> </td><td></td></tr>
-<tr><td>cgi</td><td> </td><td></td></tr>
-<tr><td>cgid</td><td> </td><td>.conf</td></tr>
-<tr><td>charset_lite</td><td> </td><td></td></tr>
-
-<tr><td>data</td><td> </td><td></td></tr>
-<tr><td>dav</td><td> </td><td></td></tr>
-<tr><td>dav_fs</td><td> </td><td>.conf</td></tr>
-<tr><td>dav_lock</td><td> </td><td></td></tr>
-<tr><td>dbd</td><td> </td><td></td></tr>
-<tr><td>deflate</td><td> </td><td>.conf</td></tr>
-<tr><td>dialup</td><td> </td><td></td></tr>
-<tr><td>dir</td><td> </td><td>.conf</td></tr>
-<tr><td>dnssd</td><td> </td><td>.conf</td></tr>
-
-<tr><td>dump_io</td><td> </td><td></td></tr>
-
-<tr><td>echo</td><td> </td><td></td></tr>
-<tr><td>env</td><td> </td><td></td></tr>
-<tr><td>expires</td><td> </td><td></td></tr>
-<tr><td>ext_filter</td><td> </td><td></td></tr>
-
-<tr><td>file_cache</td><td> </td><td></td></tr>
-<tr><td>filter</td><td> </td><td></td></tr>
-
-<tr><td>headers</td><td> </td><td></td></tr>
-<tr><td>heartbeat</td><td> </td><td></td></tr>
-<tr><td>heartmonitor</td><td> </td><td></td></tr>
-<tr><td>http2</td><td> </td><td></td></tr>
-
-<tr><td>include</td><td> </td><td></td></tr>
-<tr><td>ident</td><td> </td><td></td></tr>
-<tr><td>imagemap</td><td> </td><td></td></tr>
-<tr><td>info</td><td> </td><td>.conf</td></tr>
-
-<tr><td>lbmethod_byrequests</td><td> </td><td></td></tr>
-<tr><td>lbmethod_bybusyness</td><td> </td><td></td></tr>
-<tr><td>lbmethod_bytraffic</td><td> </td><td></td></tr>
-<tr><td>lbmethod_heartbeat</td><td> </td><td></td></tr>
-<tr><td>ldap</td><td> </td><td>.conf</td></tr>
-
-<tr><td>log_debug</td><td> </td><td></td></tr>
-<tr><td>log_forensic</td><td> </td><td></td></tr>
-<tr><td>lua</td><td> </td><td></td></tr>
-
-<tr><td>macro</td><td> </td><td></td></tr>
-<tr><td>mime</td><td> </td><td>The server reads a file containing mime document types; the filename is set by the TypesConfig directive, typically via /etc/apache2/mods-available/mime.conf, which might also include additions and overrides, and is /etc/mime.types by default.</td></tr>
-
-<tr><td>mime_magic</td><td> </td><td>.conf</td></tr>
-<tr><td>mpm_event</td><td> </td><td>.conf</td></tr>
-<tr><td>mpm_prefork</td><td> </td><td>.conf</td></tr>
-<tr><td>mpm_worker</td><td> </td><td>.conf</td></tr>
-
-<tr><td>negotiation</td><td> </td><td>.conf</td></tr>
-
-<tr><td>proxy</td><td> </td><td>.conf</td></tr>
-
-<tr><td>proxy_ajp</td><td> </td><td></td></tr>
-<tr><td>proxy_balancer</td><td> </td><td>.conf</td></tr>
-<tr><td>proxy_connect</td><td> </td><td></td></tr>
-<tr><td>proxy_express</td><td> </td><td></td></tr>
-<tr><td>proxy_fcgi</td><td> </td><td></td></tr>
-<tr><td>proxy_fdpass</td><td> </td><td></td></tr>
-<tr><td>proxy_ftp</td><td> </td><td>.conf</td></tr>
-<tr><td>proxy_hcheck</td><td> </td><td></td></tr>
-<tr><td>proxy_html</td><td> </td><td>.conf</td></tr>
-<tr><td>proxy_http</td><td> </td><td></td></tr>
-<tr><td>proxy_http2</td><td> </td><td></td></tr>
-<tr><td>proxy_scgi</td><td> </td><td></td></tr>
-<tr><td>proxy_wstunnel</td><td> </td><td></td></tr>
-
-<tr><td>ratelimit</td><td> </td><td></td></tr>
-<tr><td>reflector</td><td> </td><td></td></tr>
-<tr><td>remoteip</td><td> </td><td></td></tr>
-<tr><td>reqtimeout</td><td> </td><td>.conf</td></tr>
-<tr><td>request</td><td> </td><td></td></tr>
-<tr><td>rewrite</td><td> </td><td></td></tr>
-
-<tr><td>sed</td><td> </td><td></td></tr>
-<tr><td>session</td><td> </td><td></td></tr>
-<tr><td>session_cookie</td><td> </td><td></td></tr>
-<tr><td>session_crypto</td><td> </td><td></td></tr>
-<tr><td>session_dbd</td><td> </td><td></td></tr>
-<tr><td>setenvif</td><td> </td><td>.conf</td></tr>
-<tr><td>slotmem_plain</td><td> </td><td></td></tr>
-<tr><td>slotmem_shm</td><td> </td><td></td></tr>
-<tr><td>socache_dbm</td><td> </td><td></td></tr>
-<tr><td>socache_memcache</td><td> </td><td></td></tr>
-<tr><td>socache_shmcb</td><td> </td><td></td></tr>
-<tr><td>speling</td><td> </td><td></td></tr>
-<tr><td>ssl</td><td> </td><td>.conf</td></tr>
-<tr><td>status</td><td> </td><td>.conf</td></tr>
-
-<tr><td>substitute</td><td> </td><td></td></tr>
-<tr><td>suexec</td><td> </td><td></td></tr>
-
-<tr><td>unique_id</td><td> </td><td></td></tr>
-<tr><td>userdir</td><td> </td><td>.conf</td></tr>
-
-<tr><td>usertrack</td><td> </td><td></td></tr>
-
-<tr><td>vhost_alias</td><td> </td><td></td></tr>
-
-<tr><td>xml2enc</td><td> </td><td></td></tr>
-</table>
 
 <h3 id=CL>Configuration File Language</h3>
+
+<p>
+The configutation files consist of directives that control Apache processing.
+</p>
+<p>
+Each directive is normally specified on one line. The backslash "\" may be used as the last 
+character on a line to indicate that the directive continues onto the next line. 
+</p>
+<p>
+Arguments to directives are separated by whitespace. If an argument contains spaces, you must enclose that argument in quotes.
+</p>
+<p>
+Directives in the configuration files are case-insensitive, but arguments to directives are often case sensitive.
+</p>
+<p>
+Lines that begin with the hash character "#" are considered comments, and are ignored. Comments may not be included on the same line as a configuration directive. White space occurring before a directive is ignored, so you may indent directives for clarity. Blank lines are also ignored.
+</p>
+<p>
+The values of variables defined with the Define of or shell environment variables can be used in configuration file lines using the syntax ${VAR}. If "VAR" is the name of a valid variable, the value of that variable is substituted into that spot in the configuration file line, and processing continues as if that text were found directly in the configuration file. Variables defined with Define take precedence over shell environment variables. If the "VAR" variable is not found, the characters ${VAR} are left unchanged, and a warning is logged. Variable names may not contain colon ":" characters, to avoid clashes with RewriteMap's syntax.
+</p>
+<p>
+Only shell environment variables defined before the server is started can be used in expansions. Environment variables defined in the configuration file itself, for example with SetEnv, take effect too late to be used for expansions in the configuration file.
+</p>
+<p>
+The maximum length of a line in normal configuration files, after variable substitution and joining any continued lines, is approximately 16 MiB. In .htaccess files, the maximum length is 8190 characters.
+</p>
+<p>
+You can check your configuration files for syntax errors without starting the server by using apachectl configtest or the -t command line option.
+</p>
+<p>
+You can use mod_info's -DDUMP_CONFIG to dump the configuration with all included files and environment variables resolved and all comments and non-matching <IfDefine> and <IfModule> sections removed. However, the output does not reflect the merging or overriding that may happen for repeated directives.
+</p>
+
+<h3>Sections</h3>
+
+<p>
+Configuration sections are used to restrict the scope of the containing directives to a file, directory, host, URL and so on.
+</p>
+<p>
+Configuration sections are also used to conditional activate the containing directives if some
+condition is true. For example, the directives enclosed in an If directive section are only 
+applied if the condition of the if directive evaluates to true.
+</p>
+
+<table cellspacing=0 border=1>
+<tr><th>Directive</th><th>Description</th></tr>
+
+<tr><td><a href='https://httpd.apache.org/docs/2.4/mod/core.html#directory'>Directory</td><td>
+Enclose a group of directives that apply only to the named file-system directory, sub-directories, and their contents.</td></tr>
+
+<tr><td><a href='https://httpd.apache.org/docs/2.4/mod/core.html#directorymatch'>DirectoryMach</td><td>Enclose directives that apply to the contents of file-system directories matching a regular expression.</td></tr>
+
+<tr><td><a href='https://httpd.apache.org/docs/2.4/mod/core.html#else'>Else</td><td>
+Contains directives that apply only if the condition of a previous <If> or <ElseIf> section is not satisfied by a request at runtime.</td></tr>
+
+<tr><td><a href='https://httpd.apache.org/docs/2.4/mod/core.html#elseif'>ElseIf</td><td>
+Contains directives that apply only if the condition of a previous <If> or <ElseIf> section is not satisfied by a request at runtime.</td></tr>
+
+<tr><td><a href='https://httpd.apache.org/docs/2.4/mod/core.html#files'>Files</td><td>
+Contains directives that apply to matched filenames</td></tr>
+
+<tr><td><a href='https://httpd.apache.org/docs/2.4/mod/core.html#filesmatch'>FilesMatch</td><td>
+Contains directives that apply to regular-expression matched filenames</td></tr>
+
+<tr><td><a href='https://httpd.apache.org/docs/2.4/mod/core.html#if'>If</td><td>
+Contains directives that apply only if a condition is satisfied by a request at runtime
+</td></tr>
+
+<tr><td><a href='https://httpd.apache.org/docs/2.4/mod/core.html#ifdefine'>IfDefine</td><td>
+Encloses directives that will be processed only if a test is true at startup
+</td></tr>
+
+<tr><td><a href='https://httpd.apache.org/docs/2.4/mod/core.html#ifdirective'>IfDirective</td><td>
+Encloses directives that are processed conditional on the presence or absence of a specific directive
+</td></tr>
+
+<tr><td><a href='https://httpd.apache.org/docs/2.4/mod/core.html#iffile'>IfFile</td><td>
+Encloses directives that will be processed only if file exists at startup
+</td></tr>
+
+<tr><td><a href='https://httpd.apache.org/docs/2.4/mod/core.html#ifmodule'>IfModule</td><td>
+Encloses directives that are processed conditional on the presence or absence of a specific module
+</td></tr>
+
+<tr><td><a href='https://httpd.apache.org/docs/2.4/mod/core.html#ifsection'>IfSection</td><td>
+Encloses directives that are processed conditional on the presence or absence of a specific section directive
+</td></tr>
+
+<tr><td><a href='https://httpd.apache.org/docs/2.4/mod/core.html#location'>Location</td><td>
+Applies the enclosed directives only to matching URLs
+</td></tr>
+
+<tr><td><a href='https://httpd.apache.org/docs/2.4/mod/core.html#locationmatch'>LocationMatch</td><td>
+Applies the enclosed directives only to regular-expression matching URLs
+</td></tr>
+
+<tr><td><a href='https://httpd.apache.org/docs/2.4/mod/mod_md.html#mdomainsetsection'>MDomainSet</td><td>
+Container for directives applied to the same managed domains
+</td></tr>
+
+<tr><td><a href='https://httpd.apache.org/docs/2.4/mod/mod_proxy.html#proxy'>Proxy</td><td>
+Container for directives applied to proxied resources
+</td></tr>
+
+<tr><td><a href='https://httpd.apache.org/docs/2.4/mod/mod_proxy.html#proxymatch'>ProxyMatch</td><td>
+Container for directives applied to regular-expression-matched proxied resources
+</td></tr>
+
+<tr><td><a href='https://httpd.apache.org/docs/2.4/mod/mod_authz_core.html#requireall'>RequireAll</a></td><td>
+Enclose a group of authorization directives of which none must fail and at least one must succeed for the enclosing directive to succeed
+</td></tr>
+
+<tr><td><a href='https://httpd.apache.org/docs/2.4/mod/mod_authz_core.html#requireany'>RequireAny</a></td><td>
+Enclose a group of authorization directives of which one must succeed for the enclosing directive to succeed.
+</td></tr>
+
+<tr><td><a href='https://httpd.apache.org/docs/2.4/mod/mod_authz_core.html#requirenone'>RequireNone</a></td><td>
+Enclose a group of authorization directives of which none must succeed for the enclosing directive to not fail.
+</td></tr>
+
+<tr><td><a href='https://httpd.apache.org/docs/2.4/mod/core.html#virtualhost'>VirtualHost</td><td>
+Contains directives that apply only to a specific hostname or IP address
+</td></tr>
+
+</table>
+
+<h3><a href='https://httpd.apache.org/docs/2.4/mod/directives.html'>Directives</a></h3>
 
 <hr/>
 <h2 id=L>Logging</h2>
@@ -264,6 +257,32 @@ conf-available/other-vhosts-access-log.conf.</p>
 <tr><td>error.log</td><td>Misc messages</td></tr>
 <tr><td>other_vhosts_access.log</td><td>Access log for VirtualHosts that don't define their own logfile.</td></tr>
 </table>
+
+
+<hr/>
+<h2 id=B>Binaries</h2>
+
+<table cellspacing=0 border=1>
+<tr><th>Name</th><th>Description</th></tr>
+<tr><td>apachectl</td><td>The same as apache2ctl</td></tr>
+<tr><td>apache2ctl</td><td></td></tr>
+<tr><td>apache2</td><td>This is the web server. It runs as a system service.</td></tr>
+<tr><td>a2query</td><td></td></tr>
+<tr><td>a2ensite</td><td></td></tr>
+<tr><td>a2enmod</td><td></td></tr>
+<tr><td>a2enconf</td><td></td></tr>
+<tr><td>a2dissite</td><td></td></tr>
+<tr><td>a2dismod</td><td></td></tr>
+<tr><td>a2disconf</td><td></td></tr>
+<tr><td>split-logfile</td><td></td></tr>
+<tr><td>httxt2dbm</td><td></td></tr>
+</table>
+
+<hr/>
+<h2 id=R>References</h2>
+<p><a href='https://help.ubuntu.com/lts/serverguide/httpd.html'>Ubuntu doc</a></p>
+<p><a href='http://httpd.apache.org/docs/2.4/>Apache 2.4 Documentation</a></li>
+
 </body>
 
 </html>
