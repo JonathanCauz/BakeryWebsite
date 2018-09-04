@@ -7,6 +7,188 @@
 <body>
 <h1>MySQL</h1>
 
+<ul>
+<li><a href='#T'>Table Operations</a></li>
+<li><a href='#B'>Binaries</a></li>
+<li><a href='#DB'>Databases</a></li>
+<li><a href='#R'>References</a></li>
+</ul>
+
+<hr/>
+<h2 id=T>Table Operations</h2>
+<ul>
+<li><a href='#TC'>Create Table</a></li>
+<li><a href='#TDR'>Drop Table</a></li>
+<li><a href='#TA'>Alter Table</a></li>
+<li><a href='#DS'>Display schema of table</a></li>
+<li><a href='#TI'>Insert</a></li>
+<li><a href='#TU'>Update</a></li>
+<li><a href='#TD'>Delete</a></li>
+<li><a href='#TS'>Select</a></li>
+</ul>
+
+<h3 id=TC>Create Table</a></h3>
+<p>Use the CREATE command to create a new table:</p>
+<pre>
+CREATE TABLE table_name ( column1 datatype, column2 datatype, column3 datatype, ....); 
+</pre>
+
+
+<h3 id=TDR>Drop Table</a></h3>
+<p>Use the DROP command to remove/delete a table:</p>
+<pre>
+DROP TABLE table_name;
+</pre>
+
+
+<h3 id=TA>Alter Table</a></h3>
+<p>Use the ALTER command to alter/modify a tables definitiion.</p>
+<p>One can add,remove or modify a column definition. One can also modify the table's constraints
+and keys.</p>
+
+<p>Examples:</p>
+
+<p>Add Column:</p>
+<pre>
+ALTER TABLE table_name ADD column_name datatype;
+</pre>
+
+
+<p>Remove Column:</p>
+<pre>
+ALTER TABLE table_name DROP COLUMN column_name;
+</pre>
+
+<p>Change the data type of a column in a table, use the following syntax:</p>
+<pre>
+ALTER TABLE table_name MODIFY COLUMN column_name datatype; 
+</pre>
+
+
+<h3 id=DS>Display schema of table</h3>
+<p>Use the describe command to display the schema (column definitions and so on) of a table. For
+example:</p>
+<pre>
+describe numbers;
+</pre>
+
+<h3 id=TI>Insert</h3>
+<p>Use the INSERT command to add rows to a table.</p>
+<p>The basic form of an insert command is:
+<pre>
+INSERT INTO table_name (column1, column2, column3, ...) VALUES (value1, value2, value3, ...); 
+</pre>
+
+<h3 id=TU>Update</h3>
+<p>Use the UPDATE command to change the columns of rows in the table.</p>
+<p>The basic form of an update command is:
+<pre>
+UPDATE table_name SET column1 = value1, column2 = value2, ...  WHERE condition; 
+</pre>
+
+<h3 id=TD>Delete</h3>
+<p>Use the DELETE command to remove rows from a table.</p>
+<p>The basic form of an delete command is:
+<pre>
+delete from table_name where condition;
+</pre>
+</p>
+<p>For example,
+<pre>
+delete from accounts where last_name='cauz';
+</pre>
+
+<h3 id=TS>Select</h3>
+<p>Use the SELECT command to read data from one or more tables.</p>
+<p>The most basic form of an select command is:
+<pre>
+select col1, col2 from table_name
+</pre>
+
+
+<hr/>
+<h2 id=R>References</h2>
+<p><a href='https://help.ubuntu.com/lts/serverguide/mysql.html.en'>Ubuntu Doc</a></p>
+<p><a href='https://www.mysql.com/'>MySQL Doc</a></p>
+
+<hr/>
+<h2 id='B'>Binaries</h2>
+
+<table cellspacing=0 border=1>
+
+<tr><th>Path</th><th>Description</th></tr>
+
+<tr><td><a href='https://dev.mysql.com/doc/refman/8.0/en/innochecksum.html'>/usr/bin/innochecksum</a></td><td>Prints checksums for InnoDB files</td></tr>
+
+<tr><td><a href='https://dev.mysql.com/doc/refman/8.0/en/my-print-defaults.html'>/usr/bin/my_print_defaults</a></td><td>Displays the options that are present in option groups of option files</td></tr>
+
+<tr><td><a href='https://dev.mysql.com/doc/refman/8.0/en/myisam-ftdump.html'>/usr/bin/myisam_ftdump</a></td><td>Displays information about FULLTEXT indexes in MyISAM tables.</td></tr>
+<tr><td><a href='https://dev.mysql.com/doc/refman/8.0/en/myisamchk.html'>/usr/bin/myisamchk</a></td><td>Gets information about your database tables or checks, repairs, or optimizes them</td></tr>
+<tr><td><a href='https://dev.mysql.com/doc/refman/5.7/en/myisamlog.html'>/usr/bin/myisamlog</a></td><td>Display MyISAM Log File Contents</td></tr>
+<tr><td><a href='https://dev.mysql.com/doc/refman/8.0/en/myisampack.html'>/usr/bin/myisampack</a></td><td>Generate Compressed, Read-Only MyISAM Tables</td></tr>
+
+<tr><td><a href='https://dev.mysql.com/doc/refman/8.0/en/mysql-config-editor.html'>/usr/bin/mysql_config_editor</a></td><td>Configuration Utility</td></tr>
+<tr><td><a href='https://dev.mysql.com/doc/refman/5.6/en/mysql-install-db.html'>/usr/bin/mysql_install_db</a></td><td>Initialize MySQL Data Directory</td></tr>
+<tr><td><a href='https://dev.mysql.com/doc/refman/5.6/en/mysql-plugin.html'>/usr/bin/mysql_plugin</a></td><td>Configure MySQL Server Plugins</td></tr>
+<tr><td><a href='https://dev.mysql.com/doc/refman/8.0/en/mysql-secure-installation.html'>/usr/bin/mysql_secure_installation</a></td><td>Improve MySQL Installation Security</td></tr>
+<tr><td><a href='https://dev.mysql.com/doc/refman/5.7/en/mysql-ssl-rsa-setup.html'>/usr/bin/mysql_ssl_rsa_setup</a></td><td>Create SSL/RSA Files</td></tr>
+<tr><td><a href='https://dev.mysql.com/doc/refman/5.5/en/mysql-tzinfo-to-sql.html'>/usr/bin/mysql_tzinfo_to_sql</a></td><td>Load the Time Zone Tables</td></tr>
+<tr><td><a href='https://dev.mysql.com/doc/refman/8.0/en/mysql-upgrade.html'>/usr/bin/mysql_upgrade</a></td><td>Check and Upgrade MySQL Tables</td></tr>
+
+<tr><td><a href='https://dev.mysql.com/doc/refman/8.0/en/mysql.html'>/usr/bin/mysql</a></td><td>A simple SQL shell with input line editing capabilities. It supports interactive and noninteractive use. When used interactively, query results are presented in an ASCII-table format. When used noninteractively (for example, as a filter), the result is presented in tab-separated format. The output format can be changed using command options.</td></tr>
+<tr><td><a href='https://dev.mysql.com/doc/refman/8.0/en/mysqladmin.html'>/usr/bin/mysqladmin</a></td><td>A client for performing administrative operations. You can use it to check the server's configuration and current status, to create and drop databases, and more. </td></tr>
+<tr><td><a href='https://dev.mysql.com/doc/refman/8.0/en/mysqlbinlog.html'>/usr/bin/mysqlbinlog</a></td><td>Utility for Processing Binary Log Files</td></tr>
+<tr><td><a href='https://dev.mysql.com/doc/refman/8.0/en/mysqlcheck.html'>/usr/bin/mysqlcheck</a></td><td>A Table Maintenance Program</td></tr>
+<tr><td><a href='https://dev.mysql.com/doc/refman/8.0/en/mysqld.html'>/usr/sbin/mysqld</a></td><td>Also known as MySQL Server, is the main program that does most of the work in a MySQL installation. MySQL Server manages access to the MySQL data directory that contains databases and tables. The data directory is also the default location for other information such as log files and status files.</td></tr>
+<tr><td><a href='https://dev.mysql.com/doc/refman/5.7/en/mysqld-multi.html'>/usr/bin/mysqld_multi</a></td><td>This tool is designed to manage several mysqld processes that listen for connections on different Unix socket files and TCP/IP ports. It can start or stop servers, or report their current status.</td></tr>
+<tr><td><a href='https://dev.mysql.com/doc/refman/5.7/en/mysqld-safe.html'>/usr/bin/mysqld_safe</a></td><td>A script that should be used to start the MySQL server.</td></tr>
+<tr><td><a href='https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html'>/usr/bin/mysqldump</td><td>A client utility performs logical backups, producing a set of SQL statements that can be executed to reproduce the original database object definitions and table data. It dumps one or more MySQL databases for backup or transfer to another SQL server. The mysqldump command can also generate output in CSV, other delimited text, or XML format. </td></tr>
+<tr><td><a href='https://dev.mysql.com/doc/refman/5.7/en/mysqldumpslow.html'>/usr/bin/mysqldumpslow</a></td><td>Summarize Slow Query Log Files</td></tr>
+<tr><td><a href='https://dev.mysql.com/doc/refman/8.0/en/mysqlimport.html'>/usr/bin/mysqlimport</a></td><td>A Data Import Program</td></tr>
+<tr><td><a href='https://dev.mysql.com/doc/refman/8.0/en/mysqlpump.html'>/usr/bin/mysqlpump</a></td><td>A Database Backup Program</td></tr>
+<tr><td><a href='https://dev.mysql.com/doc/refman/8.0/en/mysqlshow.html'>/usr/bin/mysqlshow</a></td><td>Display Database, Table, and Column Information</td></tr>
+<tr><td><a href='https://dev.mysql.com/doc/refman/8.0/en/mysqlslap.html'>/usr/bin/mysqlslap</a></td><td>Load Emulation Client</td></tr>
+
+<tr><td><a href='https://dev.mysql.com/doc/refman/8.0/en/perror.html'>/usr/bin/perror</a></td><td>Explain error codes</td></tr>
+<tr><td><a href='https://dev.mysql.com/doc/refman/5.7/en/resolveip.html'>/usr/bin/resolveip</a></td><td>Resolve Host name to IP Address or Vice Versa</td></tr>
+</table>
+
+<hr/>
+<h2 id=DB>Databases</h2>
+
+<p>All tables are stored in Databases.</p>
+<p>From an mysql shell session, get the <b>list of databases</b> accessible by server with the command:
+<pre>
+show DATABASES;
+</pre>
+</p>
+<p>In order to access the tables contained in database, it should be 'in use'. To use the database
+called sys,
+<pre>
+use sys;
+</pre>
+</p>
+<p>Alternatively, you can access tables from a database by qualifying the name of the table with the
+database name. For example, to access table numbers that is in database example, use:
+<pre>
+select * from example.numbers;
+</pre>
+</p>
+<p>To get a <b>list of the tables</b> contained in a database, use:
+<pre>
+show TABLES;
+</pre>
+</p>
+<p>To <b>create</b> a new database, use the CREATE DATABASE command. For example:
+<pre>
+create database MarieBakery;
+</pre>
+</p>
+<p>To <b>drop/delete/remove</b> a database, use the command DROP DATABASE. For example:</p>
+<pre>
+DROP DATABASE example;
+</pre>
+
 </body>
 
 </html>
