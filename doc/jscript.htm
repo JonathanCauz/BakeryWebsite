@@ -7,6 +7,143 @@
 <body>
 <h1>JScript</h1>
 
+<ul>
+<li><a href='#HS'>HTML Scripting</a></li>
+<li><a href='#C'>Comments</a></li>
+<li><a href='#BT'>Built in types</a></li>
+<li><a href='#OB'>Objects</a></li>
+<li><a href='#F'>Functions</a></li>
+<li><a href='#V'>Variables</a></li>
+<li><a href='#R'>References</a></li>
+</ul>
+
+<hr/>
+<h2 id=HS>HTML Scripting</h2>
+<p>There are four places where you might use scripts:<p>
+<ol>
+<li>In the body tag of the page. In this case, the output of the script is displayed
+is part of the HTML document when the browser loads the page. The JavaScript code must be placed inside one or more script tags.</li>
+<li>In the head tag of the page. Scripts in the header are not executed immediately. They can
+introduce symbols that can be referenced by other scripts. The JavaScript code must be placed inside one or more script tags.</li>
+<li>Within an HTML tag. This is called an event handler. In this case, no script tag is needed to enclose the script.</li>
+<li>In a separate file (typically with a .js extension). These files can be included in a 
+script tag and their symbols can be referenced.</li>
+</ol>
+<p>The script tag is described <a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script'>here</a>.</p>
+<p>The most basic uses are:
+<xmp>
+<script>
+ ... your script ...
+</script>
+</xmp>
+
+<p>and</p>
+
+<xmp>
+<script src='myJavaScript.js'>
+</script>
+</xmp>
+
+<hr/>
+<h2 id='C'>Comments</h2>
+<p>There are two types of comments:</p>
+<p>Line comments:</p>
+<pre>
+// this is a line comment
+a = a + 1 // this is anoth line comment
+</pre>
+<p>Block comments:</p>
+<pre>
+/* 
+   this is a block comment
+*/
+</pre>
+
+<hr/>
+<h2 id='BT'>Built in types</h2>
+
+<table cellspacing=0 border=1>
+<tr><th>Name</th><th>Description</th><th>Values</th></tr>
+<tr><td>Undefined</td><td>The Undefined type has exactly one value, called undefined. Any variable that has not been assigned a value has the value undefined.</td><td>undefined</td></tr>
+<tr><td>Null</td><td>The Null type has exactly one value, called null.</td><td>null</td></tr>
+<tr><td>Boolean</td><td>The Boolean type represents a logical entity having two values.</td><td>true and false</td></tr>
+<tr><td>String</td><td>Orderd sequences of zero or more UTF-16 character values</td><td></td></tr>
+<tr><td>Number</td><td>Floating point values.</td><td>1e10, NaN, Infinity</td></tr>
+<tr><td>Symbol</td><td>The Symbol type is the set of all non-String values that may be used as the key of an Object property.</td><td>Symbol.hasInstance</td></tr>
+</table>
+
+
+<hr/>
+<h2 id='OB'>Objects</h2>
+
+<p>JavaScript supports three types of objects:</p>
+<ol>
+<li>Builtin-object types such as Array, String, Math, Date.</li>
+<li>Browers objects from the DOM graph.</li>
+<li>Custom objects created within the program.</li>
+</ol>
+
+<h3>Builtin (Global) Objects</h3>
+
+<ul>
+<li>Array</li>
+<li>ArrayBuffer</li>
+<li>Boolean</li>
+<li>DataView</li>
+<li>Date</li>
+<li></li>
+<li>Error</li>
+<li></li>
+<li>Function</li>
+<li>JSON</li>
+<li>Map</li>
+<li>Math</li>
+<li>Number</li>
+<li>Object</li>
+<li>Promise</li>
+<li>Proxy</li>
+<li>Reflect</li>
+<li>RegExp</li>
+<li>Set</li>
+<li>SharedArrayBuffer</li>
+<li>String</li>
+<li>Symbol</li>
+</ul>
+
+<hr/>
+<h2 id='F'>Functions</h2>
+
+<hr/>
+<h2 id=V>Variables</h2>
+<p>A variable can be created simply by an assignment statement:</p>
+<pre>
+i = 0;
+</pre>
+<p>Variables can also be declared with the var declarator, as in:</p>
+<pre>
+var i = 0;
+</pre>
+<h3>Scope</h3>
+<p>The scope of a variable is the range of source where it can be referenced. Scopes are:</p>
+<ul>
+<li>Global: A variable declared outside of a function has global scope. It can be referenced 
+anywhere in the loaded scopes.</li>
+<li>Function: A variable declared with the var keyword within a function has function scope. It
+can be refereneced within the function.</li>
+<li>Block: A variable declared with the const or let keywords within the block of a function has block scope. It can only be referenced within the block. A variable declared with const is a constant. ie. Its value cannot be changed once it is initialized.</li>
+</ul>
+<p>If a variable is declared in a scope and this scope is nested within a larger scope in which a 
+variable with the same name is declared, then the variable in the inner scope hides the 
+variable in the enclosing scope.
+</p>
+
+<hr/>
+<h2 id=R>References</h2>
+<ul>
+<li href='https://en.wikipedia.org/wiki/ECMAScript'>Wiki ECMAScript</a></li>
+<li href='http://www.ecma-international.org/ecma-262/9.0/index.html'>ECMAScript 2018</a></li>
+<ul>
+
 </body>
 
 </html>
