@@ -72,6 +72,27 @@ a = a + 1 // this is anoth line comment
 <tr><td>Symbol</td><td>The Symbol type is the set of all non-String values that may be used as the key of an Object property.</td><td>Symbol.hasInstance</td></tr>
 </table>
 
+<h3>Strings</h3>
+
+<p>Strings can be created in two (equivalent ways):</p>
+<pre>
+test = "this is a test";
+test = new String( "this is a test" );
+</pre>
+<p>Strings can be concatenated using the + operator:</p>
+<pre>
+test = test + ". And so is this";
+test += ". Also this";
+</pre>
+<p>A string's length is returned by the length property:</p>
+<pre>
+document.write(test.length);
+</pre>
+<p>A string's case can be converted to upper (resp. lower):</p>
+<pre>
+document.write(test.toUpperCase());
+document.write(test.toLowerCase());
+</pre>
 
 <hr/>
 <h2 id='OB'>Objects</h2>
@@ -91,9 +112,7 @@ a = a + 1 // this is anoth line comment
 <li>Boolean</li>
 <li>DataView</li>
 <li>Date</li>
-<li></li>
 <li>Error</li>
-<li></li>
 <li>Function</li>
 <li>JSON</li>
 <li>Map</li>
@@ -127,15 +146,30 @@ var i = 0;
 <p>The scope of a variable is the range of source where it can be referenced. Scopes are:</p>
 <ul>
 <li>Global: A variable declared outside of a function has global scope. It can be referenced 
-anywhere in the loaded scopes.</li>
+anywhere in the loaded scopes. It is a good practice to declare global variables in the head of 
+an HTML document.</li>
 <li>Function: A variable declared with the var keyword within a function has function scope. It
 can be refereneced within the function.</li>
 <li>Block: A variable declared with the const or let keywords within the block of a function has block scope. It can only be referenced within the block. A variable declared with const is a constant. ie. Its value cannot be changed once it is initialized.</li>
 </ul>
 <p>If a variable is declared in a scope and this scope is nested within a larger scope in which a 
 variable with the same name is declared, then the variable in the inner scope hides the 
-variable in the enclosing scope.
+variable in the enclosing scope. For example:
 </p>
+<pre>
+var x = 1;	// Enclosing scope definition
+
+function foo()
+{
+	var x = 2; // Inner scope
+	// ...
+	x = 3; // This is the Inner scope x
+}
+
+foo();
+
+document.write( "x = " + x ); // x = 1
+</pre>
 
 <hr/>
 <h2 id=R>References</h2>
