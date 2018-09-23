@@ -1,12 +1,1436 @@
+<!DOCTYPE html>
 <html>
 
 <head>
 <title>HTML5</title>
+<style>
+td { vertical-align:top;}
+</style>
 </head>
 
 <body>
-<h1>HTML5</h1>
 
-</body>
+<h1>HTML 5</h1>
 
-</html>
+<ul>
+<li><a href='#UP'>Usage Patterns</a></li>
+<li><a href='#TAGS'>Tags</a></li>
+<li><a href='#ATTR'>Attributes</a></li>
+<li><a href='#REF'>External References</a></li>
+</ul>
+
+<hr/>
+<h2 id=UP>Usage Patterns</h2>
+
+<ul>
+<li><a href='#UP.DS'>Document Structure</a></li>
+<li><a href='#UP.TS'>Text Styling</a></li>
+<li><a href='#UP.LN'>Linking</a></li>
+<li><a href='#UP.ST'>Styling</a></li>
+<li><a href='#UP.SC'>Scripting</a></li>
+<li><a href='#UP.T'>Tables</a></li>
+<li><a href='#UP.L'>Lists</a></li>
+<li><a href='#UP.IO'>I/O</a></li>
+<li><a href='#UP.IM'>Images and Multimedia</a></li>
+<li><a href='#PC'>Progress Controls</a></li>
+<li><a href='#UP.IF'>Inline Frames</a></li>
+<li><a href='#UP.MR'>Machine-readable Content</a></li>
+<li><a href='#UP.SVG'>Scalable Vector Graphics</a></li>
+<li><a href='#UP.EAT'>East Asian Typography</a></li>
+</ul>
+
+<hr/>
+<h3 id=UP.DS>Document Structure</h3>
+
+<p>Tags: 
+<a href='#article'>article</a>
+<a href='#aside'>aside</a>
+<a href='#blockquote'>blockquote</a>
+<a href='#body'>body</a>
+<a href='#br'>br</a>
+<a href='#details'>details</a>
+<a href='#dialog'>dialog</a>
+<a href='#div'>div</a>
+<a href='#footer'>footer</a>
+<a href='#h1-h6'>h1-h6</a>
+<a href='#head'>head</a>
+<a href='#header'>header</a>
+<a href='#hr'>hr</a>
+<a href='#html'>html</a>
+<a href='#main'>main</a>
+<a href='#nav'>nav</a>
+<a href='#p'>p</a>
+<a href='#pre'>pre</a>
+<a href='#section'>section</a>
+<a href='#summary'>summary</a>
+<a href='#template'>template</a>
+<a href='#wbr'>wbr</a>
+</p>
+<p>These tags are used to add structure to an HTML document.</p>
+
+<p>The simpliest valid document is:</p>
+
+<pre>
+&lt;!DOCTYPE html>
+&lt;html>
+  &lt;head>
+  &lt;/head>
+
+  &lt;body>
+  &lt;/body>
+
+&lt;/html>
+</pre>
+
+<hr/>
+<h3 id=UP.TS>Text Styling</h3>
+
+<p>Tags:<a href='#b'>b</a>
+<a href='#bdi'>bdi</a>
+<a href='#bdo'>bdo</a>
+<a href='#big'>big</a>
+<a href='#cite'>cite</a>
+<a href='#code'>code</a>
+<a href='#del'>del</a>
+<a href='#dfn'>dfn</a>
+<a href='#em'>em</a>
+<a href='#font'>font</a>
+<a href='#i'>i</a>
+<a href='#ins'>ins</a>
+<a href='#kbd'>kbd</a>
+<a href='#mark'>mark</a>
+<a href='#q'>q</a>
+<a href='#s'>s</a>
+<a href='#samp'>samp</a>
+<a href='#small'>small</a>
+<a href='#span'>span</a>
+<a href='#strong'>strong</a>
+<a href='#sub'>sub</a>
+<a href='#sup'>sup</a>
+<a href='#u'>u</a>
+<a href='#var'>var</a></p>
+
+<p>These tags are used to add styling to text.</p>
+
+<hr/>
+<h3 id=UP.LN>Linking</h3>
+
+<p>Tags:<a href='#a'>a</a> <a href='#link'>link</a></p>
+
+<p>These tags are used to link to another document/file.</p>
+
+<hr/>
+<h3 id=UP.ST>Styling</h3>
+
+<p>Tags:<a href='#style'>style</a></p>
+
+<p>These tags are used to add CSS rules into the document.</p>
+
+<hr/>
+<h3 id=UP.SC>Scripting</h3>
+
+<p>Tags: <a href='#noscript'>noscript</a> <a href='#script'>script</a> </p>
+
+<p>These tags are used to add JavaScript into the document.</p>
+
+<hr/>
+<h3 id=UP.T>Tables</h3>
+
+<p>Tags:
+<a href='#caption'>caption</a>
+<a href='#col'>col</a>
+<a href='#colgroup'>colgroup</a>
+<a href='#table'>table</a>
+<a href='#tbody'>tbody</a>
+<a href='#td'>td</a>
+<a href='#tfoot'>tfoot</a>
+<a href='#th'>th</a>
+<a href='#thead'>thead</a>
+<a href='#tr'>tr</a>
+</p>
+
+<p>These tags are used to render tables of data.</p>
+
+<hr/>
+<h3 id=UP.L>Lists</h3>
+
+<p>Tags:<a href='#dd'>dd</a> <a href='#dl'>dl</a> <a href='#dt'>dt</a> <a href='#li'>li</a>
+<a href='#ol'>ol</a> <a href='#ul'>ul</a></p>
+
+<p>These tags are used to render lists of data.</p>
+
+<hr/>
+<h3 id=UP.IO>I/O</h3>
+
+<p>Tags:
+<a href='#button'>button</a>
+<a href='#datalist'>datalist</a>
+<a href='#fieldset'>fieldset</a>
+<a href='#form'>form</a>
+<a href='#input'>input</a>
+<a href='#label'>label</a>
+<a href='#legend'>legend</a>
+<a href='#optgroup'>optgroup</a>
+<a href='#option'>option</a>
+<a href='#output'>output</a>
+<a href='#select'>select</a>
+<a href='#textarea'>textarea</a>
+</p>
+
+<p>These tags are used to add Input/Output controls into a document.</p>
+
+<hr/>
+<h3 id=UP.IM>Images and Multimedia</h3>
+
+<p>Tags:
+<a href='#area'>area</a>
+<a href='#audio'>audio</a>
+<a href='#canvas'>canvas</a>
+<a href='#embed'>embed</a>
+<a href='#figcaption'>figcaption</a>
+<a href='#figure'>figure</a>
+<a href='#img'>img</a>
+<a href='#map'>map</a>
+<a href='#object'>object</a>
+<a href='#param'>param</a>
+<a href='#picture'>picture</a>
+<a href='#source'>source</a>
+<a href='#track'>track</a>
+<a href='#video'>video</a>
+</p>
+
+<p>These tags are used to render images and other types of multimedia.</p>
+
+<hr/>
+<h3 id=PC>Progress Controls</a></h3>
+
+<p>Tags: <a href='#meter'>meter</a> <a href='#progress'>progress</a></p>
+
+<p>These tags are used to render the progress of some process.</p>
+
+<hr/>
+<h3 id=UP.IF>Inline Frames</h3>
+
+<p>Tags:<a href='#iframe'>iframe</a></p>
+
+<p>These tags are used to add inline frames to a document.</p>
+
+<hr/>
+<h3 id=UP.MR>Machine-readable Content</h3>
+
+<p>Tags:
+<a href='#abbr'>abbr</a>
+<a href='#acronym'>acronym</a>
+<a href='#address'>address</a>
+<a href='#base'>base</a>
+<a href='#basefont'>basefont</a>
+<a href='#data'>data</a>
+<a href='#!DOCTYPE'>!DOCTYPE</a>
+<a href='#meta'>meta</a>
+<a href='#time'>time</a>
+<a href='#title'>title</a>
+</p>
+
+<p>These tags are used to add machine-readable content to the document. Machine-readable
+content is data that is not rendered. It is intended to be read by browser, web search tools and
+so on.</p>
+
+<hr/>
+<h3 id=UP.SVG>Scalable Vector Graphics</h3>
+
+<p>Tags: <a href='#svg'>svg</a></p>
+
+<p>These tags are used to render Scalable vector graphics.</p>
+
+<hr/>
+<h3 id=UP.EAT>East Asian typography</h3>
+
+<p>Tags:<a href='#rp'>rp</a> <a href='#rt'>rt</a> <a href='#ruby'>ruby</a></p>
+
+<p>These tags are used to render East Asian typography.</p>
+
+
+<hr/>
+<h2 id=TAGS>Tags</h2>
+
+<table cellspacing=0 border=1>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Class</th>
+<th>Category</th>
+<th>Parent Elements</th>
+<th>Child Elements</th>
+</tr>
+
+<tr><td>&lt;!-- --></td>
+<td>This is a comment tag</td>
+<td>Commenting</td>
+<td>Commenting</td>
+<td>Any</td>
+<td>None</td>
+</tr>
+
+<tr id=DT><td>&lt;!DOCTYPE></td>
+<td>Strickly speaking this is not an html tag. It is used to tell the browser
+the version html in which the document is encoded.
+</td>
+<td><a href='#DE'>Document</td>
+<td><a href='#UP.MR'>Machine-readable Content</a></td>
+<td>None</td>
+<td>None</td>
+</tr>
+
+<tr id=lt><td>&lt;a></td>
+<td>
+Defines a hyperlink, which is used to link from one page to another.
+</td>
+<td><a href='#IE'>Inline</td>
+<td><a href='#UP.LN'>Linking</a></td>
+<td><a href='#BE'>Body</td>
+<td><a href='#IE'>Inline</td>
+</tr>
+
+<tr id=abbr><td>&lt;abbr></td>
+<td>
+Defines an abbreviation or an acronym, like "Mr.", "Dec.", "ASAP", "ATM".
+</td>
+<td><a href='#IE'>Inline</td>
+<td><a href='#UP.MR'>Machine-readable Content</a></td>
+<td><a href='#BE'>Body</td>
+<td><a href='#IE'>Inline</td>
+</tr>
+
+<tr id=acronym><td>&lt;acronym></td>
+<td>
+Defines an acronym.
+</td>
+<td><a href='#IE'>Inline</td>
+<td><a href='#UP.MR'>Machine-readable Content</a></td>
+<td>?</td>
+<td><a href='#IE'>Inline</td>
+</tr>
+
+<tr id=address><td>&lt;address></td>
+<td>
+Defines the contact information for the author/owner of a document or an article.
+</td>
+<td><a href='#BLE'>Block</td>
+<td><a href='#UP.MR'>Machine-readable Content</a></td>
+<td><a href='#BLE'>Block</td>
+<td><a href='#BLE'>Block</td>
+</tr>
+
+<tr id=area><td>&lt;area></td>
+<td>
+Defines an area inside an image-map (an image-map is an image with clickable areas).
+</td>
+<td><a href='#UP.IM'>Images and Multimedia</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=article><td>&lt;article></td>
+<td>
+Specifies independent, self-contained content.
+</td>
+<td><a href='#BLE'>Block</td>
+<td><a href='#UP.DS'>Document Structure</a></td>
+<td><a href='#BLE'>Block</td>
+<td><a href='#BLE'>Block</td>
+</tr>
+
+<tr id=aside><td>&lt;aside></td>
+<td>
+Defines some content aside from the content it is placed in.
+The aside content should be related to the surrounding content.
+</td>
+<td><a href='#UP.DS'>Document Structure</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=audio><td>&lt;audio></td>
+<td>
+Defines sound, such as music or other audio streams.
+</td>
+<td><a href='#UP.IM'>Images and Multimedia</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=b><td>&lt;b></td>
+<td>
+Specifies bold text.
+</td>
+<td><a href='#IE'>Inline</td>
+<td><a href='#UP.TS'>Text Styling</a></td>
+<td>?</td>
+<td><a href='#IE'>Inline</td>
+</tr>
+
+<tr id=base><td>&lt;base></td>
+<td>
+Specifies the base URL/target for all relative URLs in a document.
+</td>
+<td><a href='#UP.MR'>Machine-readable Content</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=basefont><td>&lt;basefont></td>
+<td>
+Specifies a default text-color, font-size, or font-family for all the text in a document.
+</td>
+<td><a href='#UP.MR'>Machine-readable Content</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=bdi><td>&lt;bdi></td>
+<td>
+BDI stands for Bi-Directional Isolation.
+This tag isolates a part of text that might be formatted in a different direction from other text outside it.
+This element is useful when embedding user-generated content with an unknown directionality.
+</td>
+<td><a href='#IE'>Inline</td>
+<td><a href='#UP.TS'>Text Styling</a></td>
+<td>?</td>
+<td><a href='#IE'>Inline</td>
+</tr>
+
+<tr id=bdo><td>&lt;bdo></td>
+<td>
+bdo stands for Bi-Directional Override.
+This tag is used to override the current text direction.
+</td>
+<td><a href='#IE'>Inline</td>
+<td><a href='#UP.TS'>Text Styling</a></td>
+<td>?</td>
+<td><a href='#IE'>Inline</td>
+</tr>
+
+<tr id=big><td>&lt;big></td>
+<td>
+Defines bigger text.
+</td>
+<td><a href='#IE'>Inline</td>
+<td><a href='#UP.TS'>Text Styling</a></td>
+<td>?</td>
+<td><a href='#IE'>Inline</td>
+</tr>
+
+<tr id=blockquote><td>&lt;blockquote></td>
+<td>
+Specifies a section that is quoted from another source.
+</td>
+<td><a href='#UP.DS'>Document Structure</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=body><td>&lt;body></td>
+<td>
+Defines the document's body.
+
+This element contains all the contents of an HTML document, such as text, hyperlinks, images, tables, lists, etc.
+</td>
+<td><a href='#DE'>Document</td>
+<td><a href='#UP.DS'>Document Structure</a></td>
+<td>html</td>
+<td><a href='#BLE'>Block</td>
+</tr>
+
+<tr id=br><td>&lt;br></td>
+<td>
+Inserts a single line break.
+</td>
+<td><a href='#IE'>Inline</td>
+<td><a href='#UP.DS'>Document Structure</a></td>
+<td>?</td>
+<td><a href='#IE'>Inline</td>
+</tr>
+
+<tr id=button><td>&lt;button></td>
+<td>
+Defines a clickable button.
+</td>
+<td><a href='#IE'>Inline</td>
+<td><a href='#UP.IO'>I/O</a></td>
+<td>?</td>
+<td><a href='#IE'>Inline</td>
+</tr>
+
+<tr id=canvas><td>&lt;canvas></td>
+<td>
+used to draw graphics, on the fly, via scripting (usually JavaScript).
+
+This tag is only a container for graphics, you must use a script to actually draw the graphics.
+</td>
+<td><a href='#IE'>Inline</td>
+<td><a href='#UP.IM'>Images and Multimedia</a></td>
+<td>?</td>
+<td><a href='#IE'>Inline</td>
+</tr>
+
+<tr id=caption><td>&lt;caption></td>
+<td>
+Defines a table caption.
+</td>
+<td><a href='#UP.T'>Tables</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=cite><td>&lt;cite></td>
+<td>
+Defines the title of a work (e.g. a book, a song, a movie, a TV show, a painting, a sculpture, etc.).
+</td>
+<td><a href='#IE'>Inline</td>
+<td><a href='#UP.TS'>Text Styling</a></td>
+<td>?</td>
+<td><a href='#IE'>Inline</td>
+</tr>
+
+<tr id=code><td>&lt;code></td>
+<td>
+Defines a piece of computer code.
+</td>
+<td><a href='#IE'>Inline</td>
+<td><a href='#UP.TS'>Text Styling</a></td>
+<td>?</td>
+<td><a href='#IE'>Inline</td>
+</tr>
+
+<tr id=col><td>&lt;col></td>
+<td>
+Specifies column properties for each column within a &lt;colgroup> element.
+
+This tag is useful for applying styles to entire columns, instead of repeating the styles for each cell, for each row.
+</td>
+<td><a href='#UP.T'>Tables</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=colgroup><td>&lt;colgroup></td>
+<td>
+Specifies a group of one or more columns in a table for formatting.
+</td>
+<td><a href='#UP.T'>Tables</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=data><td>&lt;data></td>
+<td>
+Links the given content with a machine-readable translation.
+</td>
+<td><a href='#UP.MR'>Machine-readable Content</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=datalist><td>&lt;datalist></td>
+<td>
+Specifies a list of pre-defined options for an &lt;input> element.
+</td>
+<td><a href='#UP.IO'>I/O</a></td>
+<td>form</td>
+<td>option</td>
+</tr>
+
+<tr id=dd><td>&lt;dd></td>
+<td>
+Describe a term/name in a description list.
+</td>
+<td><a href='#UP.L'>Lists</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=del><td>&lt;del></td>
+<td>
+Defines text that has been deleted from a document.
+</td>
+<td><a href='#UP.TS'>Text Styling</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=details><td>&lt;details></td>
+<td>
+Specifies additional details that the user can view or hide on demand.
+</td>
+<td><a href='#UP.DS'>Document Structure</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=dfn><td>&lt;dfn></td>
+<td>
+Represents the defining instance of a term in HTML.
+</td>
+<td><a href='#IE'>Inline</td>
+<td><a href='#UP.TS'>Text Styling</a></td>
+<td>?</td>
+<td><a href='#IE'>Inline</td>
+</tr>
+
+<tr id=dialog><td>&lt;dialog></td>
+<td>
+Defines a dialog box or window.
+</td>
+<td><a href='#UP.DS'>Document Structure</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=div><td>&lt;div></td>
+<td>
+Defines a division or a section in an HTML document.
+</td>
+<td><a href='#UP.DS'>Document Structure</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=dl><td>&lt;dl></td>
+<td>
+Defines a description list.
+</td>
+<td><a href='#UP.L'>Lists</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=dt><td>&lt;dt></td>
+<td>
+Defines a term/name in a description list.
+</td>
+<td><a href='#UP.L'>Lists</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=em><td>&lt;em></td>
+<td>
+It renders as emphasized text.
+</td>
+<td><a href='#IE'>Inline</td>
+<td><a href='#UP.TS'>Text Styling</a></td>
+<td>?</td>
+<td><a href='#IE'>Inline</td>
+</tr>
+
+<tr id=embed><td>&lt;embed></td>
+<td>
+Defines a container for an external application or interactive content (a plug-in).
+</td>
+<td><a href='#UP.IM'>Images and Multimedia</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=fieldset><td>&lt;fieldset></td>
+<td>
+Used to group related elements in a form.
+</td>
+<td><a href='#UP.IO'>I/O</a></td>
+<td>form</td>
+<td>legend<br/>input<br/>Text</td>
+</tr>
+
+<tr id=figcaption><td>&lt;figcaption></td>
+<td>
+Defines a caption for a &lt;figure> element.
+</td>
+<td><a href='#UP.IM'>Images and Multimedia</a></td>
+<td>figure</td>
+<td>?</td>
+</tr>
+
+<tr id=figure><td>&lt;figure></td>
+<td>
+Specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.  While the content of the &lt;figure> element is related to the main flow, its position is independent of the main flow, and if removed it should not affect the flow of the document.
+</td>
+<td><a href='#UP.IM'>Images and Multimedia</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=font><td>&lt;font></td>
+<td>
+Specifies the font face, font size, and color of text.
+</td>
+<td><a href='#UP.TS'>Text Styling</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=footer><td>&lt;footer></td>
+<td>
+Defines a footer for a document or section.
+</td>
+<td><a href='#UP.DS'>Document Structure</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=form><td>&lt;form></td>
+<td>
+Used to create an HTML form for user input.
+</td>
+<td><a href='#UP.IO'>I/O</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=h><td>&lt;h1> - &lt;h6></td>
+<td>
+Define HTML heading.
+</td>
+<td><a href='#UP.DS'>Document Structure</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=head><td>&lt;head></td>
+<td>
+This element is a container for all the head elements.
+</td>
+<td><a href='#DE'>Document</td>
+<td><a href='#UP.DS'>Document Structure</a></td>
+<td>html</td>
+<td>?</td>
+</tr>
+
+<tr id=header><td>&lt;header></td>
+<td>
+This element represents a container for introductory content or a set of navigational links.
+
+This element typically contains:
+<ul>
+<li>one or more heading elements (&lt;h1> - &lt;h6>)</li>
+<li>logo or icon</li>
+<li>authorship information</li>
+</ul>
+You can have several header elements in one document.
+</td>
+<td><a href='#UP.DS'>Document Structure</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=hr><td>&lt;hr></td>
+<td>
+This element is used to separate content (or define a change) in an HTML page. It is typically rendered as a horizontal line.
+</td>
+<td><a href='#UP.DS'>Document Structure</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=html><td>&lt;html></td>
+<td>
+This represents the root of an HTML document.  The html tag is the container for all other HTML elements (except for the <a href='#DT'>!DOCTYPE</a> tag).
+</td>
+<td><a href='#DE'>Document</td>
+<td><a href='#UP.DS'>Document Structure</a></td>
+<td>None</td>
+<td>head<br/>body</td>
+</tr>
+
+<tr id=i><td>&lt;i></td>
+<td>
+This tag defines a part of text in an alternate voice or mood. The content of the &lt;i> tag is usually displayed in italic.
+<p>
+This tag can be used to indicate a technical term, a phrase from another language, a thought, or a ship name, etc.
+</p>
+<p>
+Use the &lt;i> element only when there is not a more appropriate semantic element, such as:
+</p>
+<table cellspacing=0 border=0>
+<tr><td>&lt;em></td><td>emphasized text</td></tr>
+<tr><td>&lt;strong></td><td>important text</td></tr>
+<tr><td>&lt;mark></td><td>marked/highlighted text</td></tr>
+<tr><td>&lt;cite></td><td>the title of a work</td></tr>
+<tr><td>&lt;dfn></td><td>a definition term</td></tr>
+</table>
+
+</td>
+<td><a href='#IE'>Inline</td>
+<td><a href='#UP.TS'>Text Styling</a></td>
+<td>?</td>
+<td><a href='#IE'>Inline</td>
+</tr>
+
+<tr id=iframe><td>&lt;iframe></td>
+<td>
+This tag specifies an inline frame. An inline frame is used to embed another document within the current HTML document.
+</td>
+<td><a href='#UP.IF'>Inline Frames</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=img><td>&lt;img></td>
+<td>
+Defines an image in an HTML page.
+</td>
+<td><a href='#IE'>Inline</td>
+<td><a href='#UP.IM'>Images and Multimedia</a></td>
+<td>?</td>
+<td><a href='#IE'>Inline</td>
+</tr>
+
+<tr id=input><td>&lt;input></td>
+<td>
+Specifies an input field where the user can enter data.
+</td>
+<td><a href='#IE'>Inline</td>
+<td><a href='#UP.IO'>I/O</a></td>
+<td>?</td>
+<td><a href='#IE'>Inline</td>
+</tr>
+
+<tr id=ins><td>&lt;ins></td>
+<td>
+Defines a text that has been inserted into a document.
+</td>
+<td><a href='#UP.TS'>Text Styling</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=kbd><td>&lt;kbd></td>
+<td>
+This is a phrase tag. It defines keyboard input.
+</td>
+<td><a href='#IE'>Inline</td>
+<td><a href='#UP.TS'>Text Styling</a></td>
+<td>?</td>
+<td><a href='#IE'>Inline</td>
+</tr>
+
+<tr id=label><td>&lt;label></td>
+<td>
+This tag defines a label for an &lt;input> element.
+</td>
+<td><a href='#IE'>Inline</td>
+<td><a href='#UP.IO'>I/O</a></td>
+<td>?</td>
+<td><a href='#IE'>Inline</td>
+</tr>
+
+<tr id=legend><td>&lt;legend></td>
+<td>
+Defines a caption for the &lt;fieldset> element.
+</td>
+<td><a href='#UP.IO'>I/O</a></td>
+<td>fieldset</td>
+<td>?</td>
+</tr>
+
+<tr id=li><td>&lt;li></td>
+<td>
+Defines a list item.
+</td>
+<td><a href='#UP.L'>Lists</a></td>
+<td>ol<br/>ul</td>
+<td>?</td>
+</tr>
+
+<tr id=link><td>&lt;link></td>
+<td>
+Defines a link between a document and an external resource.
+</td>
+<td><a href='#ME'>Misc</a></td>
+<td><a href='#UP.LN'>Linking</a></td>
+<td><a href='#head'>head</a></td>
+<td>None</td>
+</tr>
+
+<tr id=main><td>&lt;main></td>
+<td>
+Specifies the main content of a document.
+</td>
+<td><a href='#UP.DS'>Document Structure</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=map><td>&lt;map></td>
+<td>
+This tag is used to define a client-side image-map. An image-map is an image with clickable areas.
+</td>
+<td><a href='#IE'>Inline</td>
+<td><a href='#UP.IM'>Images and Multimedia</a></td>
+<td>?</td>
+<td><a href='#IE'>Inline</td>
+</tr>
+
+<tr id=mark><td>&lt;mark></td>
+<td>
+Defines marked text.
+</td>
+<td><a href='#UP.TS'>Text Styling</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=meta><td>&lt;meta></td>
+<td>
+Metadata is data (information) about data.
+<p>
+The &lt;meta> tag provides metadata about the HTML document. Metadata will not be displayed on the page, but will be machine parsable.
+</p><p>
+Meta elements are typically used to specify page description, keywords, author of the document, last modified, and other metadata.
+</p>
+The metadata can be used by browsers (how to display content or reload page), search engines (keywords), or other web services.
+</td>
+<td><a href='#UP.MR'>Machine-readable Content</a></td>
+<td>head</td>
+<td>None</td>
+</tr>
+
+<tr id=meter><td>&lt;meter></td>
+<td>
+This tag defines a scalar measurement within a known range, or a fractional value. This is also known as a gauge.
+</td>
+<td><a href='#PC'>Progress Controls</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=nav><td>&lt;nav></td>
+<td>
+Defines a set of navigation links.
+</td>
+<td><a href='#UP.DS'>Document Structure</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=noscript><td>&lt;noscript></td>
+<td>
+The &lt;noscript> tag defines an alternate content for users that have disabled scripts in their browser or have a browser that doesn't support script.
+<p>
+The &lt;noscript> element can be used in both &lt;head> and &lt;body>.
+</p><p>
+When used inside the &lt;head> element: &lt;noscript> must contain only &lt;link>, &lt;style>, and &lt;meta> elements.
+</p>
+The content inside the &lt;noscript> element will be displayed if scripts are not supported, or are disabled in the user's browser.
+</td>
+<td><a href='#UP.SC'>Scripting</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=object><td>&lt;object></td>
+<td>
+The &lt;object> tag defines an embedded object within an HTML document. Use this element to embed multimedia (like audio, video, Java applets, ActiveX, PDF, and Flash) in your web pages.
+<p>
+You can also use the &lt;object> tag to embed another webpage into your HTML document.
+</p>
+You can use the &lt;param> tag to pass parameters to plugins that have been embedded with the &lt;object> tag.
+</td>
+<td><a href='#IE'>Inline</td>
+<td><a href='#UP.IM'>Images and Multimedia</a></td>
+<td>?</td>
+<td><a href='#IE'>Inline</td>
+</tr>
+
+<tr id=ol><td>&lt;ol></td>
+<td>
+Defines an ordered list.
+</td>
+<td><a href='#UP.L'>Lists</a></td>
+<td>?</td>
+<td>li</td>
+</tr>
+
+<tr id=optgroup><td>&lt;optgroup></td>
+<td>
+Used to group related options in a drop-down list.
+</td>
+<td><a href='#UP.IO'>I/O</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=option><td>&lt;option></td>
+<td>
+Defines an option in a select list.
+</td>
+<td><a href='#UP.IO'>I/O</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=output><td>&lt;output></td>
+<td>
+Represents the result of a calculation (like one performed by a script).
+</td>
+<td><a href='#UP.IO'>I/O</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=p><td>&lt;p></td>
+<td>
+Defines a paragraph.
+</td>
+<td><a href='#UP.DS'>Document Structure</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=param><td>&lt;param></td>
+<td>
+Defines a parameter for plugins embedded with an &lt;object> element.
+</td>
+<td><a href='#UP.IM'>Images and Multimedia</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=picture><td>&lt;picture></td>
+<td>
+Gives web developers more flexibility in specifying image resources.
+</td>
+<td><a href='#UP.IM'>Images and Multimedia</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=pre><td>&lt;pre></td>
+<td>
+Defines preformatted text. i.e. Spaces and line breaks are rendered.
+</td>
+<td><a href='#UP.DS'>Document Structure</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=progress><td>&lt;progress></td>
+<td>
+Represents the progress of a task.
+</td>
+<td><a href='#PC'>Progress Controls</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=q><td>&lt;q></td>
+<td>
+Defines a short (inline) quotation.
+</td>
+<td><a href='#IE'>Inline</td>
+<td><a href='#UP.TS'>Text Styling</a></td>
+<td>?</td>
+<td><a href='#IE'>Inline</td>
+</tr>
+
+<tr id=rp><td>&lt;rp></td>
+<td>
+The &lt;rp> tag can be used to provide parentheses around a ruby text, to be shown by browsers that do not support ruby annotations.
+</td>
+<td><a href='#UP.EAT'>East Asian typography</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=rt><td>&lt;rt></td>
+<td>
+The &lt;rt> tag defines an explanation or pronunciation of characters (for East Asian typography) in a ruby annotation.
+</td>
+<td><a href='#UP.EAT'>East Asian typography</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=ruby><td>&lt;ruby></td>
+<td>
+The &lt;ruby> tag specifies a ruby annotation.
+A ruby annotation is a small extra text, attached to the main text to indicate the pronunciation or meaning of the corresponding characters. This kind of annotation is often used in Japanese publications.
+</td>
+<td><a href='#UP.EAT'>East Asian typography</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=s><td>&lt;s></td>
+<td>
+This tag specifies text that is no longer correct, accurate or relevant.
+</td>
+<td><a href='#UP.TS'>Text Styling</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=samp><td>&lt;samp></td>
+<td>
+This tag is a phrase tag. It defines sample output from a computer program.
+</td>
+<td><a href='#IE'>Inline</td>
+<td><a href='#UP.TS'>Text Styling</a></td>
+<td>?</td>
+<td><a href='#IE'>Inline</td>
+</tr>
+
+<tr id=script><td>&lt;script></td>
+<td>
+This tag is used to define a client-side script (JavaScript).
+</td>
+<td><a href='#IE'>Inline</td>
+<td><a href='#UP.SC'>Scripting</a></td>
+<td>?</td>
+<td><a href='#IE'>Inline</td>
+</tr>
+
+<tr id=section><td>&lt;section></td>
+<td>
+This tag defines sections in a document, such as chapters, headers, footers, or any other sections of the document.
+</td>
+<td><a href='#UP.DS'>Document Structure</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=select><td>&lt;select></td>
+<td>
+This element is used to create a drop-down list.
+</td>
+<td><a href='#IE'>Inline</td>
+<td><a href='#UP.IO'>I/O</a></td>
+<td>?</td>
+<td><a href='#IE'>Inline</td>
+</tr>
+
+<tr id=small><td>&lt;small></td>
+<td>
+This tag defines smaller text (such as side comments).
+</td>
+<td><a href='#IE'>Inline</td>
+<td><a href='#UP.TS'>Text Styling</a></td>
+<td>?</td>
+<td><a href='#IE'>Inline</td>
+</tr>
+
+<tr id=source><td>&lt;source></td>
+<td>
+The &lt;source> tag is used to specify multiple media resources for media elements, such as &lt;video>, &lt;audio>, and &lt;picture>. The &lt;source> tag allows you to specify alternative video/audio/image files which the browser may choose from, based on its media type, codec support or media query.
+</td>
+<td><a href='#UP.IM'>Images and Multimedia</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=span><td>&lt;span></td>
+<td>
+This tag is used to group inline-elements in a document.  It provides no visual change by itself.
+</td>
+<td><a href='#IE'>Inline</td>
+<td><a href='#UP.TS'>Text Styling</a></td>
+<td>?</td>
+<td><a href='#IE'>Inline</td>
+</tr>
+
+<tr id=strong><td>&lt;strong></td>
+<td>
+This tag is a phrase tag. It defines important text.
+</td>
+<td><a href='#IE'>Inline</td>
+<td><a href='#UP.TS'>Text Styling</a></td>
+<td>?</td>
+<td><a href='#IE'>Inline</td>
+</tr>
+
+<tr id=style><td>&lt;style></td>
+<td>
+This tag is used to define style information for an HTML document.
+</td>
+<td><a href='#UP.ST'>Styling</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=sub><td>&lt;sub></td>
+<td>
+This tag defines subscript text. Subscript text appears half a character below the normal line, and is sometimes rendered in a smaller font.
+</td>
+<td><a href='#IE'>Inline</td>
+<td><a href='#UP.TS'>Text Styling</a></td>
+<td>?</td>
+<td><a href='#IE'>Inline</td>
+</tr>
+
+<tr id=summary><td>&lt;summary></td>
+<td>
+This tag defines a visible heading for the &lt;details> element. The heading can be clicked to view/hide the details.
+</td>
+<td><a href='#UP.DS'>Document Structure</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=sup><td>&lt;sup></td>
+<td>
+This tag defines superscript text. Superscript text appears half a character above the normal line, and is sometimes rendered in a smaller font.
+</td>
+<td><a href='#IE'>Inline</td>
+<td><a href='#UP.TS'>Text Styling</a></td>
+<td>?</td>
+<td><a href='#IE'>Inline</td>
+</tr>
+
+<tr id=svg><td>&lt;svg></td>
+<td>
+This tag defines a container for SVG graphics. SVG has several methods for drawing paths, boxes, circles, text, and graphic images.
+</td>
+<td><a href='#UP.SVG'>Scalable Vector Graphics</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=table><td>&lt;table></td>
+<td>
+Defines an HTML table.
+</td>
+<td><a href='#UP.T'>Tables</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=tbody><td>&lt;tbody></td>
+<td>
+This tag is used to group the body content in an HTML table.
+</td>
+<td><a href='#UP.T'>Tables</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=td><td>&lt;td></td>
+<td>
+Defines a standard cell in an HTML table.
+</td>
+<td><a href='#UP.T'>Tables</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=template><td>&lt;template></td>
+<td>
+This tag holds its content hidden from the client. Content inside a &lt;template> tag will not be rendered. The content can be visible and rendered later by using JavaScript.
+</td>
+<td><a href='#UP.DS'>Document Structure</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=textarea><td>&lt;textarea></td>
+<td>
+This tag defines a multi-line text input control. A text area can hold an unlimited number of characters, and the text renders in a fixed-width font (usually Courier).
+</td>
+<td><a href='#IE'>Inline</td>
+<td><a href='#UP.IO'>I/O</a></td>
+<td>?</td>
+<td><a href='#IE'>Inline</td>
+</tr>
+
+<tr id=tfoot><td>&lt;tfoot></td>
+<td>
+This tag is used to group footer content in an HTML table.
+</td>
+<td><a href='#UP.T'>Tables</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=th><td>&lt;th></td>
+<td>
+This tag defines a header cell in an HTML table.
+</td>
+<td><a href='#UP.T'>Tables</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=thead><td>&lt;thead></td>
+<td>
+This tag is used to group header content in an HTML table.
+</td>
+<td><a href='#UP.T'>Tables</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=time><td>&lt;time></td>
+<td>
+This tag defines a human-readable date/time.
+</td>
+<td><a href='#IE'>Inline</td>
+<td><a href='#UP.MR'>Machine-readable Content</a></td>
+<td>?</td>
+<td><a href='#IE'>Inline</td>
+</tr>
+
+<tr id=title><td>&lt;title></td>
+<td>
+This tag is required in all HTML documents and it defines the title of the document.
+</td>
+<td><a href='#UP.MR'>Machine-readable Content</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=tr><td>&lt;tr></td>
+<td>
+Defines a row in an HTML table.
+</td>
+<td><a href='#UP.T'>Tables</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=track><td>&lt;track></td>
+<td>
+Specifies text tracks for media elements (&lt;audio> and &lt;video>).
+</td>
+<td><a href='#UP.IM'>Images and Multimedia</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=u><td>&lt;u></td>
+<td>
+Represents some text that should be stylistically different from normal text, such as misspelled words or proper nouns in Chinese.
+</td>
+<td><a href='#UP.TS'>Text Styling</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=ul><td>&lt;ul></td>
+<td>
+Defines an unordered (bulleted) list.
+</td>
+<td><a href='#UP.L'>Lists</a></td>
+<td>?</td>
+<td>li</td>
+</tr>
+
+<tr id=var><td>&lt;var></td>
+<td>
+This tag is a phrase tag. It defines a variable.
+</td>
+<td><a href='#IE'>Inline</td>
+<td><a href='#UP.TS'>Text Styling</a></td>
+<td>?</td>
+<td><a href='#IE'>Inline</td>
+</tr>
+
+<tr id=video><td>&lt;video></td>
+<td>
+This tag specifies video, such as a movie clip or other video streams.
+</td>
+<td><a href='#UP.IM'>Images and Multimedia</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr id=wbr><td>&lt;wbr></td>
+<td>
+The &lt;wbr> (Word Break Opportunity) tag specifies where in a text it would be ok to add a line-break.
+</td>
+<td><a href='#UP.DS'>Document Structure</a></td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+</table>
+
+<h3>Tag Classifications</h3>
+
+<h4 id=IE>Inline Elements</h4>
+
+<p>An inline element does not start on a new line and only takes up as much width as necessary.</p>
+
+<p>Inline elements in HTML:</p>
+
+<table border=0>
+<tr><td>&lt;a></td><td>&lt;abbr></td><td>&lt;acronym></td></tr>
+<tr><td>&lt;b></td><td>&lt;bdo></td><td>&lt;big></td><td>&lt;br></td><td>&lt;button></td></tr>
+<tr><td>&lt;cite></td><td>&lt;code></td></tr>
+<tr><td>&lt;dfn></td><td></td></tr>
+<tr><td>&lt;em></td><td></td></tr>
+<tr><td>&lt;i></td><td>&lt;img></td><td>&lt;input></td></tr>
+<tr><td>&lt;kbd></td><td></td></tr>
+<tr><td>&lt;label></td><td></td></tr>
+<tr><td>&lt;map></td><td></td></tr>
+<tr><td>&lt;object></td><td></td></tr>
+<tr><td>&lt;q></td><td></td></tr>
+<tr><td>&lt;samp></td><td>&lt;script></td><td>&lt;select></td><td>&lt;small></td><td>&lt;span></td><td>&lt;strong></td><td>&lt;sub></td><td>&lt;sup></td></tr>
+<tr><td>&lt;textarea></td><td>&lt;time></td><td></td></tr>
+<tr><td>&lt;var></td><td></td></tr>
+</table>
+
+<h4 id=BLE>Block Elements</h4>
+
+<p>A block-level element always starts on a new line and takes up the full width available (stretches out to the left and right as far as it can).</p>
+
+<p>Block level elements in HTML:</p>
+
+<table border=0>
+<tr><td>&lt;address></td><td>&lt;article></td><td>&lt;aside></td></tr>
+<tr><td>&lt;blockquote></td></tr>
+<tr><td>&lt;canvas></td></tr>
+<tr><td>&lt;dd></td><td>&lt;div></td><td>&lt;dl></td><td>&lt;dt></td></tr>
+<tr><td>&lt;fieldset></td><td>&lt;figcaption></td><td>&lt;figure></td><td>&lt;footer></td><td>&lt;form></td></tr>
+<tr><td>&lt;h1>-&lt;h6></td><td>&lt;header></td><td>&lt;hr></td></tr>
+<tr><td>&lt;li></td></tr>
+<tr><td>&lt;main></td></tr>
+<tr><td>&lt;nav></td><td>&lt;noscript></td></tr>
+<tr><td>&lt;ol></td><td>&lt;output></td></tr>
+<tr><td>&lt;p></td><td>&lt;pre></td></tr>
+<tr><td>&lt;section></td></tr>
+<tr><td>&lt;table></td><td>&lt;tfoot></td></tr>
+<tr><td>&lt;ul></td></tr>
+<tr><td>&lt;video></td></tr>
+</table>
+
+<h4 id=BE>Body Elements</h4>
+
+<p>Inline Elements and Block Elements</p>
+
+<h4 id=DE>Documnet Elements</h4>
+
+<p>Document Elements are the outer most elements:</p>
+
+<table border=0>
+<tr><td>&lt;!DOCTYPE></td></tr>
+<tr><td>&lt;body></td></tr>
+<tr><td>&lt;head></td></tr>
+<tr><td>&lt;html></td></tr>
+</table>
+
+<h4 id=ME>Misc Elements</h4>
+
+<p>Miscellaneous Elements are special purpose elements that do not fall in the other categories:</p>
+
+<table border=0>
+<tr><td>&lt;!-- --></td></tr>
+<tr><td>&lt;link></td></tr>
+</table>
+
+<hr/>
+<h2 id=ATTR>Attributes</h2>
+
+<hr/>
+<h2 id=REF>External References</h2>
+<p><a href='https://www.w3schools.com/tags/tag_s.asp'>w3schools page</a></p>
+
+
+</body></html>

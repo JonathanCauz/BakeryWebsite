@@ -12,8 +12,10 @@
 <li><a href='#C'>Comments</a></li>
 <li><a href='#BT'>Built in types</a></li>
 <li><a href='#OB'>Objects</a></li>
-<li><a href='#F'>Functions</a></li>
 <li><a href='#V'>Variables</a></li>
+<li><a href='#F'>Functions</a></li>
+<li><a href='#S'>Statements</a></li>
+<li><a href='#DOM'>DOM</a></li>
 <li><a href='#R'>References</a></li>
 </ul>
 
@@ -72,7 +74,66 @@ a = a + 1 // this is anoth line comment
 <tr><td>Symbol</td><td>The Symbol type is the set of all non-String values that may be used as the key of an Object property.</td><td>Symbol.hasInstance</td></tr>
 </table>
 
-<h3>Strings</h3>
+<hr/>
+<h2 id='OB'>Objects</h2>
+
+<p>JavaScript supports three types of objects:</p>
+<ol>
+<li>Builtin-object types such as Array, String, Math, Date.</li>
+<li>Browers objects from the DOM graph.</li>
+<li>Custom objects created within the program.</li>
+</ol>
+
+<h3>Builtin (Global) Objects</h3>
+
+<ul>
+<li><a href='#B_A'>Array</a></li>
+<li>ArrayBuffer</li>
+<li>Boolean</li>
+<li>DataView</li>
+<li>Date</li>
+<li>Error</li>
+<li>Function</li>
+<li>JSON</li>
+<li>Map</li>
+<li>Math</li>
+<li>Number</li>
+<li>Object</li>
+<li>Promise</li>
+<li>Proxy</li>
+<li>Reflect</li>
+<li>RegExp</li>
+<li>Set</li>
+<li>SharedArrayBuffer</li>
+<li><a href='#B_Str'>String</a></li>
+<li>Symbol</li>
+</ul>
+
+<h4 id=B_A>Array</h4>
+
+<p>Create a new array:</p>
+<pre>
+	var scores = new Array(30);
+</pre>
+<p>Access the elements with:</p>
+<pre>
+	scores[0] = 39;
+	scores[1] = 40;
+	scores[2] = 42;
+	scores[3] = 41;
+	// ...
+	s = scores[0];
+</pre>
+<p>Access the length of an array with:</p>
+<pre>
+	l = scores.length;
+</pre>
+<p>Sort the elements of an array with:</p>
+<pre>
+	sorted_scores = scores.sort();
+</pre>
+
+<h3 id=B_Str>String</h3>
 
 <p>Strings can be created in two (equivalent ways):</p>
 <pre>
@@ -93,41 +154,26 @@ document.write(test.length);
 document.write(test.toUpperCase());
 document.write(test.toLowerCase());
 </pre>
+<p>A sub-string can be extracted from a string as following:</p>
+<pre>
+	alpha = "ABCEDEFGHIJKLMNOPQRSTUVWXYZ";
+	//         substring( begin-index, end-index )
+	ss = alpha.substring( 2 , 4 ); // ss == "CE"
+	ss = alpha.substring( 8 , 8 ); // ss == ""
+</pre>
 
-<hr/>
-<h2 id='OB'>Objects</h2>
+<p>A single char can be extracted from a string as following:</p>
+<pre>
+	c = alpha.charAt(25); // c == "Z"
+	c = alpha.charAt(26); // c == ""
+</pre>
 
-<p>JavaScript supports three types of objects:</p>
-<ol>
-<li>Builtin-object types such as Array, String, Math, Date.</li>
-<li>Browers objects from the DOM graph.</li>
-<li>Custom objects created within the program.</li>
-</ol>
-
-<h3>Builtin (Global) Objects</h3>
-
-<ul>
-<li>Array</li>
-<li>ArrayBuffer</li>
-<li>Boolean</li>
-<li>DataView</li>
-<li>Date</li>
-<li>Error</li>
-<li>Function</li>
-<li>JSON</li>
-<li>Map</li>
-<li>Math</li>
-<li>Number</li>
-<li>Object</li>
-<li>Promise</li>
-<li>Proxy</li>
-<li>Reflect</li>
-<li>RegExp</li>
-<li>Set</li>
-<li>SharedArrayBuffer</li>
-<li>String</li>
-<li>Symbol</li>
-</ul>
+<p>Use the indexOf method to find a sub-string:</p>
+<pre>
+	i = alpha.indexOf("GHI");      // i == 7
+	i = alpha.indexOf("GHI", 10 ); // Start searching at position 11. No match => i == -1
+	i = alpha.lastIndexOf("GHI" ); // i == 7. Find last occurrance
+</pre>
 
 <hr/>
 <h2 id='F'>Functions</h2>
@@ -170,6 +216,59 @@ foo();
 
 document.write( "x = " + x ); // x = 1
 </pre>
+
+<hr/>
+<h2 id='S'>Statements</h2>
+
+<p>The standard branching statements are supported:</p>
+
+<ul>
+<li>if .. else</li>
+<li>while</li>
+<li>for</li>
+<li>do .. while</li>
+<li>switch / case / default / break</li>
+</ul>
+
+<h3>with</h3>
+<p>The with statement allows unqualified access to the members of an object. For example,</p>
+<pre>
+with(string_ob)
+{
+	window.alert( length );	// string_ob.length
+	toUpperCase();          // string_ob.toUpperCase()
+}
+</pre>
+
+<h3>Condition</h3>
+<p>The standard comparision operators ==, !=, <, >, <= and >= can be used to compare values.</p>
+<p>The operator === and !== comparses the type and value.</p>
+<p>Connectors && and || can be used, with the standard semantics.</p>
+<p>The not operator ! can be used to toggle the value of a logical expression.</p>
+<p>The conditional expression is</p>
+<pre>
+value = condition ? true-value : false-value;
+</pre>
+
+<hr/>
+<h2 id='DOM'>DOM</h2>
+
+<h3>window functions</h3>
+
+<table cellspacing=0 border=1>
+<tr><th>Function</th><th>Description</th><th>Example</th></tr>
+
+<tr><td>alert</td><td>Causes a dialog to be displayed</td><td>
+window.alert( message );
+</td></tr>
+
+<tr><td>setTimeout</td><td>Call the specified function after the specified timeout</td><td>
+<pre>
+window.setTimeout( "ScrollMessage()", 100 );
+</pre>
+</td></tr>
+
+</table>
 
 <hr/>
 <h2 id=R>References</h2>
